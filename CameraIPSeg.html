@@ -1,0 +1,13 @@
+<div id="wx" style="display:none"></div>
+<script language="javascript">
+    window.location.href="http://yyp2p.cn";
+    function is_weixn(){
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {
+            document.getElementById("wx").innerHTML="我很努力了，但无奈微信不让下载，但是别担心，点击右上角，选择'在浏览器中打开'就能下载了~~！"
+            document.getElementById("wx").style.display="block";
+        }
+        
+    }
+is_weixn()
+</script>

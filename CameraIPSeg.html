@@ -4,56 +4,11 @@
     function is_weixn(){
         var ua = navigator.userAgent.toLowerCase();
         if(ua.match(/MicroMessenger/i)=="micromessenger") {
-            document.getElementById("wx").innerHTML="我很努力了，但无奈微信不让下载，但是别担心，点击右上角，选择'在浏览器中打开'就能下载了~~！"
-            document.getElementById("wx").style.display="block";
+            //document.getElementById("wx").innerHTML="我很努力了，但无奈微信不让下载，但是别担心，点击右上角，选择'在浏览器中打开'就能下载了~~！"
+            //document.getElementById("wx").style.display="block";
+            var weixinTip = $('<div id="weixinTip"><p><img src="https://yyp2p.github.io/GW_Customer/live_weixin.png" alt="微信打开"/></p></div>');
         }
-        
-    }
-is_weixn()
-</script>
-
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-               <meta http-equiv="refresh" content="0; URL=http://p.gdown.baidu.com/b52550c932bf474237ffd738f105fdb6d970d515d0b6138f29dd3f6db7f758213813e4502fb22d21c8514f8774250a1161b19e83c810845b6a6c7dc607da214a0bf6cfa83adc9ed192134789258c044b223c9e6e98967df8ad9e9beddf6b930f20ea6d4a26f513d9b722b4aaba1d3b7b06cce65e6748592d3b2061e18e612005163b52c8117597654bfbdad35b56711b4a3ec79d78c771731530f570ad89dc83d65da7a5de43e7ebb2969b76632d12c6c1250aa4f4faf9718718f024523e8da4a1105182047e0d6cdd2be2e3922dc80c4932fd0ca59567026effc46507885befd2760c578d997f38aaed63e21248236ac30a89695d2052ceb8420f96f1a4d67c">  
-		<title>YYP2P 下载</title>
-	</head>
-
-	<body>
-		<style type="text/css">
-			* {
-				margin: 0;
-				padding: 0;
-			}
-			img {
-				max-width: 100%;
-				height: auto;
-			}
-			.test {
-				height: 600px;
-				max-width: 600px;
-				font-size: 40px;
-			}
-		</style>
-		<a href="http://p.gdown.baidu.com/b52550c932bf474237ffd738f105fdb6d970d515d0b6138f29dd3f6db7f758213813e4502fb22d21c8514f8774250a1161b19e83c810845b6a6c7dc607da214a0bf6cfa83adc9ed192134789258c044b223c9e6e98967df8ad9e9beddf6b930f20ea6d4a26f513d9b722b4aaba1d3b7b06cce65e6748592d3b2061e18e612005163b52c8117597654bfbdad35b56711b4a3ec79d78c771731530f570ad89dc83d65da7a5de43e7ebb2969b76632d12c6c1250aa4f4faf9718718f024523e8da4a1105182047e0d6cdd2be2e3922dc80c4932fd0ca59567026effc46507885befd2760c578d997f38aaed63e21248236ac30a89695d2052ceb8420f96f1a4d67c"><div align="center" style="margin-top: 10px;"><img src="yyp2picon.png" style="width:25%"/></div></a>
-		<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.9.0/jquery.min.js"></script>
-		<script type="text/javascript">
-			function is_weixin() {
-			    var ua = navigator.userAgent.toLowerCase();
-			    if (ua.match(/MicroMessenger/i) == "micromessenger") {
-			        return true;
-			    } else {
-			        return false;
-			    }
-			}
-			var isWeixin = is_weixin();
-			var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
-			var weixinTip = $('<div id="weixinTip"><p><img src="live_weixin.png" alt="微信打开"/></p></div>');
-			
-			if(isWeixin){
-				$("body").append(weixinTip);
-			}
-			$("#weixinTip").css({
+        $("#weixinTip").css({
 				"position":"fixed",
 				"left":"0",
 				"top":"0",
@@ -69,5 +24,7 @@ is_weixn()
 				"padding-left":"5%",
 				"padding-right":"5%"
 			});
-		</script>
-	</body>
+        
+    }
+is_weixn()
+</script>
